@@ -1,0 +1,389 @@
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="modalLogin" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div *ngIf="bandera==0" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body container-fluid">
+                <p>BIENVENIDO AL REGISTRO PARA FORMAR PARTE DE LA ESMERALDA, ESTE REGISTRO SE COMPONE DE 4 PASOS. AL PRESIONAR CONTINUAR ESTAS ACEPTANDO LOS TERMINOS Y CONDICIONES SOBRE EL MANEJO DE TU INFORMACION PERSONAL</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="background-color: rgb(9, 132, 81);" (click)="guardar(bandera)">
+              COMENZAR
+            </button>
+            </div>
+        </div>
+        <div *ngIf="bandera==1" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-5 mt-5">
+                    </div>
+                    <div class="col-2 mt-5">
+                        <img src="../../../../assets/img/no1.png" style="width: 100%; height: 120px;" alt="">
+                    </div>
+                    <div class="col-5"></div>
+                    <div class="col-2"></div>
+                    <div class="col-8 text-center">
+                        <p>SELECCIONA LA CATEGORÍA A LA CUAL QUIERES HACER LA PRUEBA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="background-color: rgb(9, 132, 81);" (click)="guardar(0)">
+            CONTINUAR
+          </button>
+            </div>
+        </div>
+        <div *ngIf="bandera==2" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <button (click)="guardar(bandera,0)" style="border-radius: 15px; height: 70px; background: url(../../../../assets/img/laesmeralda.jpg); background-size: 100% 100%;" class="w-100">SUB-13</button>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <button (click)="guardar(bandera,1)" style="border-radius: 15px; height: 70px; background: url(../../../../assets/img/laesmeralda.jpg); background-size: 100% 100%;" class="w-100">SUB-15</button>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <button (click)="guardar(bandera,2)" style="border-radius: 15px; height: 70px; background: url(../../../../assets/img/laesmeralda.jpg); background-size: 100% 100%;" class="w-100">SUB-17</button>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <button (click)="guardar(bandera,3)" style="border-radius: 15px; height: 70px; background: url(../../../../assets/img/laesmeralda.jpg); background-size: 100% 100%;" class="w-100">SUB-20</button>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <button (click)="guardar(bandera,4)" style="border-radius: 15px; height: 70px; background: url(../../../../assets/img/laesmeralda.jpg); background-size: 100% 100%;" class="w-100">FEMENIL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
+        <div *ngIf="bandera==3" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-5 mt-5">
+                    </div>
+                    <div class="col-2 mt-5">
+                        <img src="../../../../assets/img/no2.png" style="width: 100%; height: 120px;" alt="">
+                    </div>
+                    <div class="col-5"></div>
+                    <div class="col-2"></div>
+                    <div class="col-8 text-center">
+                        <p>INGRESA TUS DATOS PERSONALES PARA PODER CONOCERTE Y COMUNICARNOS CONTIGO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="background-color: rgb(9, 132, 81);" (click)="guardar(bandera)">
+          CONTINUAR
+        </button>
+            </div>
+        </div>
+        <div *ngIf="bandera==4" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+            </div>
+
+            <div class="modal-body container-fluid">
+                <form autocomplete="off" (ngSubmit)="guardar( bandera,forma )" #forma="ngForm">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">NOMRE COMPLETO</h6>
+                                </div>
+                                <input class="form-control" type="text" name="nombre" [ngModel]=(usuario.nombre) placeholder="Nombre" required minlenght="5">
+                                <div *ngIf="alertapapa==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">FECHA DE NACIMIENTO</h6>
+                                </div>
+                                <input class="form-control" type="date" name="nacimiento" [ngModel]=(usuario.nacimiento) required>
+                                <div *ngIf="alertapapacel==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">CURP</h6>
+                                </div>
+                                <input class="form-control" type="text" name="curp" [ngModel]=(usuario.curp) placeholder="Ingresa tu curp" required minlenght="18" maxlength="18">
+                                <div *ngIf="alertapapa==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">ESTADO</h6>
+                                </div>
+                                <input class="form-control" type="text" name="estado" [ngModel]=(usuario.estado) placeholder="Nombre" required>
+                                <div *ngIf="alertapapa==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">TELEFONO</h6>
+                                </div>
+                                <input class="form-control" type="number" name="telefono" [ngModel]=(usuario.telefono) placeholder="Ingresa tu número telefonico" required minlenght="10">
+                                <div *ngIf="alertapapa==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">CORREO ELECTRONICO</h6>
+                                </div>
+                                <input class="form-control" type="email" name="correo" [ngModel]=(usuario.correo) placeholder="Nombre" required>
+                                <div *ngIf="alertapapa==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="background-color: rgb(9, 132, 81);" (click)="guardar( bandera,  forma )">
+                  ENVIAR DATOS
+                </button>
+            </div>
+        </div>
+        <div *ngIf="bandera==5" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-5 mt-5">
+                    </div>
+                    <div class="col-2 mt-5">
+                        <img src="../../../../assets/img/no3.png" style="width: 100%; height: 120px;" alt="">
+                    </div>
+                    <div class="col-5"></div>
+                    <div class="col-2"></div>
+                    <div class="col-8 text-center">
+                        <p>INGRESA LOS DATOS DE TU PADRE O TUTOR EN CASO DE ALGUNA EMERGEMCIA DURANTE LA VISORIA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="background-color: rgb(9, 132, 81);" (click)="guardar(bandera)">
+        CONTINUAR
+      </button>
+            </div>
+        </div>
+        <div *ngIf="bandera==6" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+            </div>
+
+
+            <div class="modal-body container-fluid">
+                <form>
+                    <form autocomplete="off" (ngSubmit)="guardar( forma )" #padres="ngForm">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                        <div class="mb-1 w-100"></div>
+                                        <h6 style="color: white;">NOMRE COMPLETO</h6>
+                                    </div>
+                                    <input class="form-control" type="text" name="npadre" [ngModel]=(usuario.npadre) placeholder="Nombre" required minlenght="5">
+                                    <div *ngIf="alertapapa==1" class="alert alert-danger w-100" role="alert">
+                                        LLENAR CAMPO
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                        <div class="mb-1 w-100"></div>
+                                        <h6 style="color: white;">TELEFONO</h6>
+                                    </div>
+                                    <input class="form-control" type="number" name="tpadre" [ngModel]=(usuario.tpadre) placeholder="Ingresa tu número telefonico" required minlenght="10">
+                                    <div *ngIf="alertapapa==1" class="alert alert-danger w-100" role="alert">
+                                        LLENAR CAMPO
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" style="background-color:rgb(9, 132, 81); color: rgb(255,255,255);" (click)="regresar(bandera); $event.preventDefault();" type="button">REGRESAR</button>
+                <button class="btn btn-success" style="background-color: rgb(9, 132, 81); color: rgb(255,255,255);" (click)="guardar(bandera, padres)" type="button">CONTINUAR</button>
+            </div>
+        </div>
+        <div *ngIf="bandera==7" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">REGISTRO</h4>
+                <button (click)="cerrar()" type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+            </div>
+            <div class="modal-body container-fluid">
+                <div class="row">
+                    <div class="col-5 mt-5">
+                    </div>
+                    <div class="col-2 mt-5">
+                        <img src="../../../../assets/img/no3.png" style="width: 100%; height: 120px;" alt="">
+                    </div>
+                    <div class="col-5"></div>
+                    <div class="col-2"></div>
+                    <div class="col-8 text-center">
+                        <p>Ahora selecciona en que posición del campo juegas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="background-color: rgb(9, 132, 81);" (click)="guardar(bandera)">
+      CONTINUAR
+    </button>
+            </div>
+        </div>
+        <div *ngIf="bandera==8" class="modal-content">
+            <div style="background-color: rgb(9, 132, 81);" class="modal-header">
+                <h4 style="color: white;" class="modal-title">POSICION DE CAMPO</h4>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+
+            <div class="modal-body container-fluid">
+                <form>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">POSICION PREFERIDA</h6>
+                                </div>
+                                <select #p1 class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                  <option selected value="">SELECCIONAR POSICION</option>
+                                  <option value="PT">PORTERO</option>
+                                  <option value="LI">LATERAL IZQUIERDO</option>
+                                  <option value="LD">LATERAL DERECHO</option>
+                                  <option value="DFC">DEFENSA CENTRAL</option>
+                                  <option value="MC">MEDIO CENTRAL</option>
+                                  <option value="MCD">MEDIO CENTRAL DEFENSIVO</option>
+                                  <option value="MCO">MEDIO CENTRAL OFENSIVO</option>
+                                  <option value="EI">EXTREMO IZQUIERDO</option>
+                                  <option value="ED">EXTREMO DERECHO</option>
+                                  <option value="SD">SEGUNDO DELANTERO</option>
+                                  <option value="DC">DELANTERO CENTRAL</option>
+                        </select>
+                                <div *ngIf="alertap1==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-12">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">POSICION SECUNDARIA</h6>
+                                </div>
+                                <select #p2 class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                  <option selected value="">SELECCIONAR POSICION</option>
+                                  <option value="PT">PORTERO</option>
+                                  <option value="LI">LATERAL IZQUIERDO</option>
+                                  <option value="LD">LATERAL DERECHO</option>
+                                  <option value="DFC">DEFENSA CENTRAL</option>
+                                  <option value="MC">MEDIO CENTRAL</option>
+                                  <option value="MCD">MEDIO CENTRAL DEFENSIVO</option>
+                                  <option value="MCO">MEDIO CENTRAL OFENSIVO</option>
+                                  <option value="EI">EXTREMO IZQUIERDO</option>
+                                  <option value="ED">EXTREMO DERECHO</option>
+                                  <option value="SD">SEGUNDO DELANTERO</option>
+                                  <option value="DC">DELANTERO CENTRAL</option>
+                        </select>
+                                <div *ngIf="alertap2==1" class="alert alert-danger w-100" role="alert">
+                                    LLENAR CAMPO
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-12">
+                            <div class="input-group mb-3">
+                                <div class="w-100 text-center" style="background-color: rgb(9, 132, 81);">
+                                    <div class="mb-1 w-100"></div>
+                                    <h6 style="color: white;">PIERNA PREFERIDA</h6>
+                                </div>
+                                <select #pierna class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                              <option selected value="1">DERECHA</option>
+                              <option value="2">IZQUIERDA</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" style="background-color: rgb(9, 132, 81);" data-dismiss="modal" (click)="guardar(p1.value, p2.value, pierna.value)">
+                ENVIAR DATOS
+              </button>
+            </div>
+        </div>
+    </div>
+</div>

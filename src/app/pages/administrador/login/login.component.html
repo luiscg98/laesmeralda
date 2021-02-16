@@ -1,0 +1,13 @@
+<div class="body" style="height: 680px;">
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <img src="../../../../assets/img/logo2.jpg" class="mb-3" style="height: 120px;" alt="">
+                <input #user type="text" placeholder="username" />
+                <input #pass type="password" placeholder="password" />
+                <button (click)="login(user.value, pass.value); $event.preventDefault();">login</button>
+            </form>
+        </div>
+    </div>
+
+</div>
